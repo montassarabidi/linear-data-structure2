@@ -1,0 +1,25 @@
+ALGORITHM Linearcheck
+VAR
+    set1:ARRAY_OF INTEGER [20];
+    set2:ARRAY_OF INTEGER [20];
+    sum,i,j :integer;
+BEGIN
+Write("Donner la premiere table"); 
+read(set1);
+Write("Donner la deuxiéme table);
+read(set2);
+
+    i:=0;
+    j:=0;
+    sum:=0;
+
+FOR i FROM 0 TO set1.length STEP 1  DO
+    WHILE ( set1[i] <> set2 [j] && j < set2.length ) DO
+        j++
+    END_WHILE
+    IF (j == set2.length) THEN
+        Sum := Sum + set1[i];
+    END_IF
+END_FOR 
+Write("Sum is " + sum);
+END
